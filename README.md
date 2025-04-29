@@ -1,6 +1,9 @@
 # 1DT305
 Summer 2025 - Applied IoT
 
+## Introduction
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
 
 ## Goals
  - WiFi enabled
