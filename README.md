@@ -3,7 +3,7 @@ Summer 2025 - Applied IoT
 
 ## Introduction
 > [!NOTE]
-> I, the author, have multiple years of both embedded hardware and software design. The level of complexity of this project is not reasonable for a beginner IoT-project!
+> I, the author, have multiple years of both embedded hardware design and software development. The level of complexity of this project is not reasonable for a beginner IoT-project!
 
 ## Goals
  - WiFi enabled
