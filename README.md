@@ -13,4 +13,5 @@ Summer 2025 - Applied IoT
  - Pressure sensor
  - Air quality sensor
  - Light sensor
+ - OLED screen
  - LED 
