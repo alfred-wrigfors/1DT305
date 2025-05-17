@@ -1,17 +1,22 @@
 # 1DT305
 Summer 2025 - Applied IoT
 
-## Introduction
 > [!NOTE]
-> I, the author, have multiple years of both embedded hardware design and software development. The level of complexity of this project is not reasonable for a beginner IoT-project!
+> I, the author, have multiple years of experience in both embedded hardware design and software development. The level of complexity of this project is not reasonable for a beginner IoT-project!
 
-## Goals
- - WiFi enabled
- - USB-C (programming, serial debugging and power)
- - Temperature sensor
- - Humidity sensor
- - Pressure sensor
- - Air quality sensor
- - Light sensor
- - OLED screen
- - LED 
+## Introduction
+With family living close to the Vikhög marina, there is the constant question wether or not the condition in/around the marina is appropriate for going swimming. It is mostly the water temperature and levels of wind that are of interest. Insight into the conditions in the marina would greatly increase the likelihood of spontaneous and enjoyable swims, while also helping to avoid unpleasant surprises - such as unexpected cold water or strong winds. Rather than relying on regional forecasts, a localized monitoring system would offer a much more accurate and timely solution.
+
+This project aims to provide current and up-to-date temperature readings, for both the water and air, accross the marina and an overall wind speed and heading reading. The goal is to distribute 2-4 battery- and solar powered sensor-stations at the most popular areas for going swimming, communicating wirelessly with a base-station that is connected to the internet and sending the data to a remote server that provides the information (both current and historic) in a simple and intuitive web-interface.
+
+## Goals and constraints
+Some overall goals for the project:
+ - Server / web interface containerized to run in a Docker container.
+ - The base station and the mobile units should be electronically identical.
+ - Be able to sustain one month (31 days) of operation without recharging the unit manually.
+ - WiFi enabled.
+ - USB-C (programming, serial debugging and power).
+ - Temperature sensor (air and water)
+ - Humidity sensor.
+ - Light sensor (photoresisotr / phototransistor).
+ - (Pressure sensor) [OPTIONAL]
