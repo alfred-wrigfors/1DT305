@@ -26,24 +26,36 @@ class Battery:
         return self.energy / self.max_energy
         
 
-POWER_DRAW              = 1.5
-POWER_DRAW_DURATION     = 2.0
-POWER_DRAW_PERIOD       = 30.0
+POWER_DRAW              = {
+    "ESP32":    3.3 * 0.140,
+    "TARVOS":   3.3 * 0.023,
+    "DIODE":    0.7 * 0.200,
+    "DC-DC":    0.2,
+    "CHARGER":  0.1
+}
+
+POWER_DRAW              = sum(POWER_DRAW.values())
+
+POWER_DRAW_DURATION     = 0.5
+POWER_DRAW_PERIOD       = 10.0
 
 SOLAR_POWER             = 0.5
-SOLAR_EFFICIENCY_FACTOR = 0.5
+SOLAR_EFFICIENCY_FACTOR = 0.38
 
-sun = Sun(10.0, 17.0, 1/2)
-bat = Battery(2.5*3600, 3.7, 1.0)
+sun = Sun(9.0, 17.5, 1/2)
+bat = Battery(3.0*3600, 3.7, 1.0)
 
 soc = []
 time = []
-for i in range(60*60*24*31):
+for i in range(60*60*24*31 + 1):
     solar   = sun.update(i / (60 * 60)) * SOLAR_POWER * SOLAR_EFFICIENCY_FACTOR
     device  = POWER_DRAW * (i % int(POWER_DRAW_PERIOD) in range(int(POWER_DRAW_DURATION)))
     soc.append(bat.update(device - solar, 1))
-    # soc.append(device)
     time.append(i / (60.0*60.0*24))
+    if soc[-1] <= 0:
+        break
+
+print(str(int(i / (60.0 * 60.0 * 24.0))) + " days and " + str(int((i / (60.0 * 60.0)) % 24)) + " hours")
 
 plt.plot(time, soc)
 plt.ylim(-0.1, 1.1)
