@@ -13,6 +13,7 @@ This project aims to provide current and up-to-date temperature readings, for bo
 Some overall goals for the project:
  - Server / web interface containerized to run in a Docker container.
  - The base station and the mobile units should be electronically identical.
+ - Hardware designed to be fully assebled by the PCB fab.
  - Be able to sustain one month (31 days) of operation without recharging the unit manually.
  - WiFi enabled.
  - USB-C (programming, serial debugging and power).
