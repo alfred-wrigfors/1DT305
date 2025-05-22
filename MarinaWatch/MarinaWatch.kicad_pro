@@ -430,7 +430,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "AirWarden.kicad_pro",
+    "filename": "MarinaWatch.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -574,7 +574,7 @@
   },
   "sheets": [
     [
-      "e686e1b8-c13f-42ef-ac73-0c0cead9570c",
+      "6e9d61f8-6668-48dd-9aac-9d74200f2082",
       "Root"
     ]
   ],
