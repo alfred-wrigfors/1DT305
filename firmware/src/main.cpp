@@ -1,43 +1,30 @@
-#include <WiFi.h>
-
-#include "constants.hpp"
-
-// Replace with your STA (client) credentials
-const char* ssid_sta = "Your_STA_SSID";
-const char* password_sta = "Your_STA_Password";
-
-// Replace with your AP credentials
-const char* ssid_ap = "ESP32_AP";
-const char* password_ap = "12345678";
+#include "WiFi.h"
 
 void setup() {
   Serial.begin(115200);
-
-  // Set the ESP32 to both AP and STA mode
-  WiFi.mode(WIFI_AP_STA);
-
-  // Start STA (connect to existing Wi-Fi)
-  WiFi.begin(ssid_sta, password_sta);
-  Serial.println("Connecting to WiFi (STA)...");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("\nConnected to STA network.");
-  Serial.print("STA IP address: ");
-  Serial.println(WiFi.localIP());
-
-  // Start AP
-  bool result = WiFi.softAP(ssid_ap, password_ap);
-  if (result) {
-    Serial.println("Access Point started.");
-    Serial.print("AP IP address: ");
-    Serial.println(WiFi.softAPIP());
-  } else {
-    Serial.println("Failed to start Access Point.");
-  }
+  delay(1000);  // Allow time for Serial monitor to connect
+  WiFi.mode(WIFI_STA);  // Set WiFi to station mode
+  Serial.println("ESP32 S3 WiFi Scanner Started");
 }
 
 void loop() {
-  // Your code here
+  Serial.println("\nScanning for WiFi networks...");
+
+  int n = WiFi.scanNetworks();
+  if (n == 0) {
+    Serial.println("No networks found.");
+  } else {
+    Serial.printf("%d network(s) found:\n", n);
+    for (int i = 0; i < n; ++i) {
+      Serial.printf("%d: %s (RSSI: %d) %s\n", i + 1,
+                    WiFi.SSID(i).c_str(),
+                    WiFi.RSSI(i),
+                    (WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? "Open" : "Encrypted");
+    }
+  }
+
+  // Clean up to free memory
+  WiFi.scanDelete();
+
+  delay(1000);  // Wait 1 second before the next scan
 }
