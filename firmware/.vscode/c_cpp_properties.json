@@ -11,6 +11,8 @@
                 "C:/Users/alfre/Documents/GIT/1DT305/firmware/include",
                 "C:/Users/alfre/Documents/GIT/1DT305/firmware/src",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                "C:/Users/alfre/Documents/GIT/1DT305/firmware/.pio/libdeps/esp32s3usbotg/SHT85",
+                "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/newlib/platform_include",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/freertos/include",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/freertos/include/esp_additions/freertos",
@@ -241,7 +243,6 @@
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                 "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 ""
             ],
             "browse": {
@@ -250,6 +251,8 @@
                     "C:/Users/alfre/Documents/GIT/1DT305/firmware/include",
                     "C:/Users/alfre/Documents/GIT/1DT305/firmware/src",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
+                    "C:/Users/alfre/Documents/GIT/1DT305/firmware/.pio/libdeps/esp32s3usbotg/SHT85",
+                    "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/newlib/platform_include",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/freertos/include",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32s3/include/freertos/include/esp_additions/freertos",
@@ -480,7 +483,6 @@
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WebServer/src",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
                     "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/WiFiProv/src",
-                    "C:/Users/alfre/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     ""
                 ]
             },
