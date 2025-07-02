@@ -20,6 +20,11 @@ function display_data(data){
     envChart.data.datasets[1].data = data.air_temp;
     envChart.data.datasets[2].data = data.air_humidity;
 
+    const timestamps = data.water_temp.map(d => new Date(d.x).getTime());
+
+    envChart.options.scales.x.min = new Date(Math.min(...timestamps));
+    envChart.options.scales.x.max = new Date(Math.max(...timestamps));
+
     // Redraw the chart
     envChart.update();
 }
@@ -30,7 +35,6 @@ function create_chart(){
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: timeLabels,
         datasets: [
           {
             label: 'Water Temp (°C)',
@@ -65,6 +69,21 @@ function create_chart(){
       options: {
         responsive: true,
         scales: {
+            x: {
+                type: 'time',
+                time: {
+                unit: 'minute', // or 'second', 'hour', 'day', etc.
+                tooltipFormat: 'HH:mm:ss',
+                displayFormats: {
+                    minute: 'HH:mm',
+                    second: 'HH:mm:ss'
+                }
+                },
+                title: {
+                display: true,
+                text: 'Time'
+                }
+            },
           y: {
             type: 'linear',
             position: 'left',
@@ -106,7 +125,10 @@ function create_chart(){
           mode: 'nearest',
           axis: 'x',
           intersect: false
-        }
+        },
+        ticks: {
+            maxTicksLimit: 8
+            }
       }
     });
 
@@ -115,13 +137,28 @@ function create_chart(){
 
 // MOCK DATA
 function mock_data(){
-    const waterTemps    = Array.from({ length: 100 }, () => Math.random() * 2 + 18);
-    const airTemps      = Array.from({ length: 100 }, () => Math.random() * 2 + 25);
-    const humidityVals  = Array.from({ length: 100 }, () => Math.random() * 2 + 60);
+    const now = Date.now();
+    const intervalMs = 1000 * 60*60; // 1 second intervals
+    const count = 48;
+
+    const waterTemps = Array.from({ length: count }, (_, i) => ({
+        x: new Date(now - (count - i) * intervalMs).toISOString(), // or use new Date(...)
+        y: Math.random() * 2 + 18
+    }));
+
+    const airTemps = Array.from({ length: count }, (_, i) => ({
+        x: new Date(now - (count - i) * intervalMs).toISOString(),
+        y: Math.random() * 2 + 25
+    }));
+
+    const humidityVals = Array.from({ length: count }, (_, i) => ({
+        x: new Date(now - (count - i) * intervalMs).toISOString(),
+        y: Math.random() * 2 + 50
+    }));
 
     return {
         water_temp: waterTemps,
         air_temp: airTemps,
         air_humidity: humidityVals
-    }
+    };
 }
