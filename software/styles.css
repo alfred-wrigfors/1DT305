@@ -1,0 +1,8 @@
+:root {
+    --main-bg: linear-gradient(to right top, #d0eafc, #f3f9ff);
+    --card-bg: rgba(255, 255, 255, 0.3);
+    --text-main: #0d1b2a;
+    --text-sub: #3c4a60;
+    --blur: 10px;
+}
+
