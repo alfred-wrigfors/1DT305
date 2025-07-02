@@ -27,6 +27,15 @@ function display_data(data){
 
     // Redraw the chart
     envChart.update();
+
+    const waterTemp = document.getElementById('waterTemp');
+    const airTemp = document.getElementById('airTemp');
+    const humidity = document.getElementById('humidity');
+
+    waterTemp.textContent = `${data.water_temp[data.water_temp.length - 1].y.toFixed(2)} °C`;
+    airTemp.textContent = `Air Temperature: ${data.air_temp[data.air_temp.length - 1].y.toFixed(2)} °C`;
+    humidity.textContent = `Humidity: ${data.air_humidity[data.air_humidity.length - 1].y.toFixed(2)} %`;
+
 }
 
 function create_chart(){
