@@ -25,3 +25,16 @@ body {
     flex-direction: column;
     gap: 1.5rem;
 }
+
+.water-temp {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #0077be;
+    margin: 0.25rem 0;
+}
+
+.sub-info {
+    font-size: 1.2rem;
+    color: var(--text-sub);
+    margin: 0.25rem 0;
+}
