@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marina Watch - Vikhög</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina Watch - Vikhög</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card">
+            <div class="water-temp" id="waterTemp">22.5°C</div>                 <!-- TODO: Replace -->
+            <div class="sub-info"   id="airTemp">Air Temperature: 20.1°C</div>  <!-- TODO: Replace -->
+            <div class="sub-info"   id="humidity">Humidity: 55%</div>           <!-- TODO: Replace -->
+        </div>
+        <div class="card">
+            <canvas id="envChart"></canvas>
+        </div>
+    </div>    
 </body>
 </html>
