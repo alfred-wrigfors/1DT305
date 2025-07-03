@@ -1,18 +1,29 @@
-services:
-   mosquitto:
-    container_name: mosquitto
-    image: eclipse-mosquitto
-    restart: always
-    networks:
-      - localnet
-    ports:
-      - 1883:1883
-      - 1884:1884
-    volumes:
-      - ./.data/mosquitto/config:/mosquitto/config
-      - ./.data/mosquitto/data:/mosquitto/data
-      - ./.data/mosquitto/log:/mosquitto/log
+# services:
+#    mosquitto:
+#     container_name: mosquitto
+#     image: eclipse-mosquitto
+#     restart: always
+#     networks:
+#       - localnet
+#     ports:
+#       - 1883:1883
+#       - 1884:1884
+#     volumes:
+#       - ./.data/mosquitto/config:/mosquitto/config
+#       - ./.data/mosquitto/data:/mosquitto/data
+#       - ./.data/mosquitto/log:/mosquitto/log
 
-networks:
-  localnet:
-    driver: bridge
+# networks:
+#   localnet:
+#     driver: bridge
+version: '3.9'
+
+services:
+  software:
+    build: ./software
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./software:/app
+    environment:
+      - FLASK_ENV=development
