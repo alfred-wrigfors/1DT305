@@ -1,4 +1,4 @@
-from datetime import datetime
+import time
 import pickle 
 
 
@@ -32,8 +32,7 @@ class Database:
             pass
 
     def __get_seconds__() -> float:
-        now = datetime.now()
-        return 0.0 # TODO
+        return time.time()
     
     def get_water(self, duration: float) -> None:
         if len(self.water) < 1:
