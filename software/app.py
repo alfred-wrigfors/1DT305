@@ -1,15 +1,20 @@
 from flask import Flask
 import time
 
+
+
 from database import Database
 
 app = Flask(__name__)
 
-database = Database("")
+database = Database()
+
 database.put_water(1.0, 10.0)
 database.put_water(2.0, 11.0)
 database.put_water(3.0, 12.0)
 database.put_water(4.0, 13.0)
+
+database = Database()
 
 
 @app.route("/")
@@ -22,7 +27,7 @@ def get():
 
 @app.route("/api/put")
 def put():
-    return database.put_water(34.5, 34.4)
+    return str(database.put_water(34.5, 34.4))
 
 @app.route("/api/fetch/<time>")
 def fetch(time):
