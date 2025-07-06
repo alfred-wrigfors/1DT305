@@ -367,6 +367,108 @@
 				)
 			)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0_16P"
 			(pin_names
 				(offset 1.016)
@@ -1276,6 +1378,261 @@
 				)
 			)
 			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:Thermistor_PTC"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TH"
+				(at -4.064 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Thermistor_PTC"
+				(at 3.048 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Temperature dependent resistor, positive temperature coefficient"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "resistor PTC thermistor sensor RTD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*PTC* *Thermistor* PIN?ARRAY* bornier* *Terminal?Block* R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Thermistor_PTC_0_1"
+				(arc
+					(start -3.048 2.159)
+					(mid -3.0495 2.3143)
+					(end -3.175 2.413)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.048 2.159)
+					(mid -2.9736 1.9794)
+					(end -2.794 1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.048 2.794)
+					(mid -2.9736 2.6144)
+					(end -2.794 2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 1.905)
+					(mid -2.6144 1.9794)
+					(end -2.54 2.159)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 2.54)
+					(mid -2.4393 2.5587)
+					(end -2.159 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.794 3.048)
+					(mid -2.9736 2.9736)
+					(end -3.048 2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.54 2.794)
+					(mid -2.6144 2.9736)
+					(end -2.794 3.048)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.159) (xy -2.54 2.794)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 2.54) (xy -1.778 1.524) (xy 1.778 -1.524) (xy 1.778 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -3.683) (xy -2.54 -1.397) (xy -2.794 -2.159) (xy -2.286 -2.159) (xy -2.54 -1.397) (xy -2.54 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -3.683) (xy -1.778 -1.397) (xy -2.032 -2.159) (xy -1.524 -2.159) (xy -1.778 -1.397)
+						(xy -1.778 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "Thermistor_PTC_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -2886,6 +3243,524 @@
 				)
 			)
 		)
+		(symbol "Simulation_SPICE:OPAMP"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "${SIM.PARAMS}"
+				(at 3.81 -3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "SUBCKT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Name" "kicad_builtin_opamp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "simulation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "OPAMP_0_1"
+				(polyline
+					(pts
+						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "OPAMP_1_1"
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Simulation_SPICE:PMOS"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "PMOS"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "P-MOSFET transistor, drain/source/gate"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "PMOS"
+				(at 0 -17.145 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" "VDMOS"
+				(at 0 -19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=D 2=G 3=S"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "transistor PMOS P-MOS P-MOSFET simulation"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PMOS_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.778) (xy 3.302 1.778) (xy 3.302 -1.778) (xy 0.762 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 0) (xy 1.27 0.381) (xy 1.27 -0.381) (xy 2.286 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 -0.508) (xy 2.921 -0.381) (xy 3.683 -0.381) (xy 3.81 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.381) (xy 2.921 0.254) (xy 3.683 0.254) (xy 3.302 -0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "PMOS_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers hide)
@@ -3464,16 +4339,40 @@
 		)
 	)
 	(junction
+		(at 407.67 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "070e9f78-88e9-48af-98bd-3b0e18aafb45")
+	)
+	(junction
 		(at 194.31 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1c46f670-fed5-4fcc-9cb4-9f3188372e8a")
 	)
 	(junction
+		(at 407.67 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1cbf2d7b-0b5f-4be5-8dd1-31285b78d1fe")
+	)
+	(junction
 		(at 50.8 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "25759966-2469-4d44-830a-26c4cf1a014d")
+	)
+	(junction
+		(at 394.97 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e756403-4dbf-4381-bc9d-d59586b3b26d")
+	)
+	(junction
+		(at 407.67 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "45b055ae-af1b-4214-94b0-5d2b80a9d8ff")
 	)
 	(junction
 		(at 133.35 54.61)
@@ -3492,6 +4391,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69a69d0a-abd0-4d4a-827f-6cd31e259d3a")
+	)
+	(junction
+		(at 342.9 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "69b07ae5-b86a-417c-aa18-a7b39cb56200")
 	)
 	(junction
 		(at 93.98 43.18)
@@ -3516,6 +4421,36 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e39e4b3-1a87-4643-a303-30cbc4049849")
+	)
+	(junction
+		(at 342.9 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a224274b-61aa-40f3-9b41-2331f02eca7d")
+	)
+	(junction
+		(at 363.22 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2edf3dc-3cbc-4777-ba73-f9bf7c677602")
+	)
+	(junction
+		(at 407.67 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b9cbc1b1-9b75-4585-9ac1-c4593a72eb19")
+	)
+	(junction
+		(at 420.37 67.31)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf060204-0909-491b-ac6a-91045bec353a")
+	)
+	(junction
+		(at 363.22 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d36082ea-3e7a-4b9b-a1c0-d6ba4969eaf4")
 	)
 	(junction
 		(at 41.91 43.18)
@@ -3695,6 +4630,16 @@
 	)
 	(wire
 		(pts
+			(xy 417.83 54.61) (xy 420.37 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03427511-48a5-42bc-bd4b-ec50ab3da432")
+	)
+	(wire
+		(pts
 			(xy 146.05 97.79) (xy 144.78 97.79)
 		)
 		(stroke
@@ -3712,6 +4657,16 @@
 			(type default)
 		)
 		(uuid "0b36502d-fbe8-4fa6-a752-250f410f41f0")
+	)
+	(wire
+		(pts
+			(xy 342.9 40.64) (xy 363.22 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ba29b80-4cd2-4b16-9d39-ce41c379fae9")
 	)
 	(wire
 		(pts
@@ -3775,6 +4730,16 @@
 	)
 	(wire
 		(pts
+			(xy 381 83.82) (xy 383.54 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19853d48-a3c1-448c-b238-43fd6e3f0bf4")
+	)
+	(wire
+		(pts
 			(xy 123.19 44.45) (xy 119.38 44.45)
 		)
 		(stroke
@@ -3785,6 +4750,16 @@
 	)
 	(wire
 		(pts
+			(xy 383.54 43.18) (xy 383.54 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e64689a-5209-47e9-b147-96f109497dd2")
+	)
+	(wire
+		(pts
 			(xy 144.78 102.87) (xy 166.37 102.87)
 		)
 		(stroke
@@ -3792,6 +4767,36 @@
 			(type default)
 		)
 		(uuid "1f72d528-438d-410d-ac87-c95162ed7119")
+	)
+	(wire
+		(pts
+			(xy 363.22 57.15) (xy 363.22 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f88e69a-6bf2-4125-9a09-d079506592fb")
+	)
+	(wire
+		(pts
+			(xy 394.97 67.31) (xy 397.51 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "215eb34f-d2ff-4b1f-871b-ccbfd34f887c")
+	)
+	(wire
+		(pts
+			(xy 420.37 68.58) (xy 420.37 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25aa1807-ce07-47f5-a0c6-d6829a8fdeaa")
 	)
 	(wire
 		(pts
@@ -3825,6 +4830,16 @@
 	)
 	(wire
 		(pts
+			(xy 405.13 54.61) (xy 407.67 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fd7fa82-d95d-4781-b4e0-5850f9c5b58f")
+	)
+	(wire
+		(pts
 			(xy 67.31 45.72) (xy 66.04 45.72)
 		)
 		(stroke
@@ -3842,6 +4857,16 @@
 			(type default)
 		)
 		(uuid "366866ab-3f9c-40d2-bcda-d0c5c334cbf1")
+	)
+	(wire
+		(pts
+			(xy 363.22 40.64) (xy 365.76 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea738cd-bc6c-4f1e-b529-d513da579d83")
 	)
 	(wire
 		(pts
@@ -3865,6 +4890,16 @@
 	)
 	(wire
 		(pts
+			(xy 342.9 58.42) (xy 342.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41c9ab33-e2cb-44ed-ba9a-bbaa60ba36bf")
+	)
+	(wire
+		(pts
 			(xy 177.8 35.56) (xy 177.8 36.83)
 		)
 		(stroke
@@ -3872,6 +4907,16 @@
 			(type default)
 		)
 		(uuid "4618f7f1-8eaa-4ecf-bf28-8ab1e952005f")
+	)
+	(wire
+		(pts
+			(xy 340.36 58.42) (xy 342.9 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "478e8a7c-bc82-42a0-bb79-cc641543bb96")
 	)
 	(wire
 		(pts
@@ -3885,6 +4930,16 @@
 	)
 	(wire
 		(pts
+			(xy 342.9 39.37) (xy 342.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a95dd1b-e556-4f54-af35-6bfb2a508f63")
+	)
+	(wire
+		(pts
 			(xy 167.64 45.72) (xy 177.8 45.72)
 		)
 		(stroke
@@ -3892,6 +4947,36 @@
 			(type default)
 		)
 		(uuid "4b3e7f79-e85d-493a-a6a9-4aa7930cd1f5")
+	)
+	(wire
+		(pts
+			(xy 383.54 97.79) (xy 363.22 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b85df4a-854a-4305-92dc-1b2219bac5b1")
+	)
+	(wire
+		(pts
+			(xy 381 38.1) (xy 407.67 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d74a79f-f612-400f-ba72-b912f83cb217")
+	)
+	(wire
+		(pts
+			(xy 363.22 97.79) (xy 363.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50350fd7-491b-48ca-a119-4e6c1aedd6ea")
 	)
 	(wire
 		(pts
@@ -3975,6 +5060,16 @@
 	)
 	(wire
 		(pts
+			(xy 405.13 67.31) (xy 407.67 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a440152-8131-49c5-a221-6b867502d5cb")
+	)
+	(wire
+		(pts
 			(xy 119.38 53.34) (xy 119.38 54.61)
 		)
 		(stroke
@@ -4012,6 +5107,26 @@
 			(type default)
 		)
 		(uuid "6e0a099d-2a09-4e7a-8284-039244ec8b09")
+	)
+	(wire
+		(pts
+			(xy 407.67 67.31) (xy 410.21 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e65a732-7f63-495e-aed4-0cacc817198f")
+	)
+	(wire
+		(pts
+			(xy 407.67 54.61) (xy 410.21 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7106a744-a8d9-4a83-b781-cd5465939d3f")
 	)
 	(wire
 		(pts
@@ -4085,6 +5200,16 @@
 	)
 	(wire
 		(pts
+			(xy 417.83 67.31) (xy 420.37 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79bd3f71-1297-44ac-b224-63fc3de68a66")
+	)
+	(wire
+		(pts
 			(xy 59.69 53.34) (xy 59.69 52.07)
 		)
 		(stroke
@@ -4122,6 +5247,16 @@
 			(type default)
 		)
 		(uuid "80c09f82-6155-4d89-923e-5f8af8794004")
+	)
+	(wire
+		(pts
+			(xy 394.97 53.34) (xy 394.97 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82c3cb56-3d94-4aef-a355-e030505abd9f")
 	)
 	(wire
 		(pts
@@ -4185,6 +5320,26 @@
 	)
 	(wire
 		(pts
+			(xy 342.9 81.28) (xy 363.22 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "960b1ba3-9b20-4722-a8bc-b5ee85768dbc")
+	)
+	(wire
+		(pts
+			(xy 375.92 33.02) (xy 375.92 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9760af6d-ebfd-4c17-9441-a5a4d287bd28")
+	)
+	(wire
+		(pts
 			(xy 57.15 144.78) (xy 57.15 146.05)
 		)
 		(stroke
@@ -4235,6 +5390,56 @@
 	)
 	(wire
 		(pts
+			(xy 335.28 53.34) (xy 335.28 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b55e7b58-5b4f-44a3-8be1-2b359c7f5a0f")
+	)
+	(wire
+		(pts
+			(xy 375.92 48.26) (xy 375.92 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b578adb9-40ce-4d0a-9bc8-abdd1fd19566")
+	)
+	(wire
+		(pts
+			(xy 394.97 54.61) (xy 397.51 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b59a085d-9f70-426e-ad1b-0ebf175c92de")
+	)
+	(wire
+		(pts
+			(xy 381 78.74) (xy 407.67 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba1f1b78-4380-4da6-9ca6-4cc1f8cf2193")
+	)
+	(wire
+		(pts
+			(xy 381 43.18) (xy 383.54 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba87c8c7-f2cc-4ed5-845e-b57628366985")
+	)
+	(wire
+		(pts
 			(xy 93.98 41.91) (xy 93.98 43.18)
 		)
 		(stroke
@@ -4242,6 +5447,36 @@
 			(type default)
 		)
 		(uuid "be5e4549-25e0-48ea-b3f6-db8b36d14034")
+	)
+	(wire
+		(pts
+			(xy 342.9 82.55) (xy 342.9 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfb02223-59ec-4570-99ae-fc67c064429d")
+	)
+	(wire
+		(pts
+			(xy 375.92 88.9) (xy 375.92 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfb4807d-2e49-4ac8-8c75-f954bc7c9e71")
+	)
+	(wire
+		(pts
+			(xy 383.54 83.82) (xy 383.54 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0048541-d752-46ec-8cf4-95831030981c")
 	)
 	(wire
 		(pts
@@ -4275,6 +5510,16 @@
 	)
 	(wire
 		(pts
+			(xy 420.37 67.31) (xy 420.37 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8ff4e8d-0cef-424a-86f9-cdb9e61dd8db")
+	)
+	(wire
+		(pts
 			(xy 29.21 43.18) (xy 33.02 43.18)
 		)
 		(stroke
@@ -4292,6 +5537,16 @@
 			(type default)
 		)
 		(uuid "ccb3e78a-b390-45d6-bef5-c50d1527b855")
+	)
+	(wire
+		(pts
+			(xy 407.67 78.74) (xy 407.67 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce749063-39fa-416c-91f6-6e508d4ff55e")
 	)
 	(wire
 		(pts
@@ -4345,6 +5600,16 @@
 	)
 	(wire
 		(pts
+			(xy 340.36 63.5) (xy 342.9 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc0b4366-996a-4683-b313-9d1dca5be560")
+	)
+	(wire
+		(pts
 			(xy 29.21 41.91) (xy 29.21 43.18)
 		)
 		(stroke
@@ -4362,6 +5627,26 @@
 			(type default)
 		)
 		(uuid "dde34890-85e9-4486-b91f-9746fd9631f4")
+	)
+	(wire
+		(pts
+			(xy 342.9 63.5) (xy 342.9 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2882b70-95a8-41f6-8def-fbfb0c565b3e")
+	)
+	(wire
+		(pts
+			(xy 335.28 68.58) (xy 335.28 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e301f285-8405-4649-930b-4ef8ae04e385")
 	)
 	(wire
 		(pts
@@ -4395,6 +5680,26 @@
 	)
 	(wire
 		(pts
+			(xy 407.67 38.1) (xy 407.67 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e87ab30f-30cc-4d11-84bf-7b5a01bc07f2")
+	)
+	(wire
+		(pts
+			(xy 394.97 67.31) (xy 394.97 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e896e865-d8d8-4471-aca7-4529cd2fbd48")
+	)
+	(wire
+		(pts
 			(xy 144.78 118.11) (xy 146.05 118.11)
 		)
 		(stroke
@@ -4402,6 +5707,16 @@
 			(type default)
 		)
 		(uuid "ea2a7f48-b314-4a79-a237-19f8e0a939fe")
+	)
+	(wire
+		(pts
+			(xy 363.22 81.28) (xy 365.76 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ead219ef-5945-4566-ab87-19fb28139ab4")
 	)
 	(wire
 		(pts
@@ -4422,6 +5737,16 @@
 			(type default)
 		)
 		(uuid "ee467a90-9fde-4e69-b94f-484e9bf902df")
+	)
+	(wire
+		(pts
+			(xy 407.67 80.01) (xy 407.67 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f18dc385-c3a6-4ad5-b974-c0f030cecff6")
 	)
 	(wire
 		(pts
@@ -4482,6 +5807,36 @@
 			(type default)
 		)
 		(uuid "f9aa0363-1b88-4815-891a-7062015f944c")
+	)
+	(wire
+		(pts
+			(xy 407.67 36.83) (xy 407.67 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9d4f5e6-431a-4acd-a10c-627c63a52e6f")
+	)
+	(wire
+		(pts
+			(xy 383.54 57.15) (xy 363.22 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc502629-e322-481f-9413-23f306ce9706")
+	)
+	(wire
+		(pts
+			(xy 375.92 72.39) (xy 375.92 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd5c08e4-2b3c-4864-911a-184160eabc67")
 	)
 	(wire
 		(pts
@@ -4619,6 +5974,17 @@
 		)
 		(uuid "00f7a26c-f084-4e5d-b6ef-4f5e87cd17be")
 	)
+	(label "PT_DIFF_P"
+		(at 360.68 40.64 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "427e1afa-2b4c-4b4a-b2e3-72d32b129ec4")
+	)
 	(label "V_BAT"
 		(at 167.64 45.72 0)
 		(fields_autoplaced yes)
@@ -4629,6 +5995,17 @@
 			(justify left bottom)
 		)
 		(uuid "4d14a122-04d3-453b-ae25-d25e06aff34c")
+	)
+	(label "PT_DIFF_N"
+		(at 360.68 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4de59ec1-85bb-47b0-a5e3-297dff2c84dc")
 	)
 	(label "BOOT"
 		(at 31.75 93.98 0)
@@ -4641,6 +6018,17 @@
 		)
 		(uuid "4eacc036-19a9-4d3b-9ebf-5e2a30003d32")
 	)
+	(label "PT_ANALOG"
+		(at 383.54 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50e62359-d88e-47e4-8801-f70c36aec003")
+	)
 	(label "V_BAT"
 		(at 31.75 96.52 0)
 		(fields_autoplaced yes)
@@ -4651,6 +6039,17 @@
 			(justify left bottom)
 		)
 		(uuid "8866ad33-dcbd-4074-801e-faf83a55519e")
+	)
+	(label "PT_REF"
+		(at 383.54 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fb533c9-8a2e-4ad5-942b-c549f9d7ed86")
 	)
 	(label "V_SOLAR"
 		(at 31.75 99.06 0)
@@ -4782,6 +6181,73 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 407.67 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "07d40a16-8ffe-4adf-9e9e-16d167c6ec60")
+		(property "Reference" "TP101"
+			(at 404.622 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 410.21 34.7979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 412.75 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 412.75 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 407.67 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99ae2c08-ba8b-4372-8178-d0786e16b14f")
+		)
+		(instances
+			(project ""
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "TP101")
 					(unit 1)
 				)
 			)
@@ -5204,6 +6670,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 420.37 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "21104da7-a098-41f8-8f5a-b94337e0ff04")
+		(property "Reference" "#PWR0104"
+			(at 420.37 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 420.37 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 420.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 420.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 420.37 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7c86545-a7c4-40f6-84ef-1e899c468648")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 74.93 54.61 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5526,6 +7057,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 375.92 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fa8b56b-ff69-41be-990b-a5b247fb3ce7")
+		(property "Reference" "#PWR0106"
+			(at 375.92 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 375.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 375.92 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07d9a951-5090-4738-aaa1-a604b8ec2f13")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 119.38 49.53 0)
 		(unit 1)
@@ -5654,6 +7250,122 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:OPAMP")
+		(at 373.38 81.28 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39d6ada5-9020-4de5-9e9e-9c0b1a119dc4")
+		(property "Reference" "U102"
+			(at 368.554 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "${SIM.PARAMS}"
+			(at 378.9365 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp"
+			(at 373.38 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "33e7b076-c26e-43a9-ae65-5b4915d861c3")
+		)
+		(pin "3"
+			(uuid "559a86c8-06ca-4e10-9a93-2f506528d4e9")
+		)
+		(pin "4"
+			(uuid "436e014e-2245-4603-8a99-87ca3100c56d")
+		)
+		(pin "1"
+			(uuid "f7976f3f-a869-4d67-91b4-4fa605c54bf1")
+		)
+		(pin "5"
+			(uuid "20b672c8-3938-4a24-9dbc-8070a21d2636")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "U102")
 					(unit 1)
 				)
 			)
@@ -5922,6 +7634,122 @@
 		)
 	)
 	(symbol
+		(lib_id "Simulation_SPICE:OPAMP")
+		(at 332.74 60.96 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "449d3043-a173-405b-af46-06d76c4cd123")
+		(property "Reference" "U103"
+			(at 327.914 56.896 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "${SIM.PARAMS}"
+			(at 338.2965 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp"
+			(at 332.74 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "eee6dbe3-a6cd-4f85-8999-0f4c696af27e")
+		)
+		(pin "3"
+			(uuid "b2794d7e-3472-4bbb-a51a-b2fad01ee346")
+		)
+		(pin "4"
+			(uuid "d11d915e-25c8-4487-b28b-863a9fcb1bc9")
+		)
+		(pin "1"
+			(uuid "9f31b960-b5a2-47a3-946c-0ab535c5fb9e")
+		)
+		(pin "5"
+			(uuid "577ad292-6f28-4f7e-9abb-136b16100b9a")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "U103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 133.35 55.88 0)
 		(unit 1)
@@ -6046,6 +7874,205 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 414.02 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ac0dde4-42d7-49b6-a292-d0bc3c2abc4d")
+		(property "Reference" "R102"
+			(at 416.56 65.278 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 416.56 69.596 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 414.02 69.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 414.02 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 414.02 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f450a784-eeee-4ab7-986c-0d2b183c1942")
+		)
+		(pin "1"
+			(uuid "a978b770-bf79-44a6-9804-c147e84d4379")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "R102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 375.92 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ce1f8ae-18aa-4b0d-9717-c30797328583")
+		(property "Reference" "#PWR0105"
+			(at 375.92 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 375.92 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 375.92 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d7677e4-141f-4c9a-8a94-4dbf16b13957")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 375.92 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4fbbb251-eb46-4ae5-99b6-c2d5743969f2")
+		(property "Reference" "#PWR0102"
+			(at 375.92 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 375.92 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 375.92 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b7acb9d-ce3e-4437-8b13-a9d770afdd93")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -6188,6 +8215,106 @@
 		)
 	)
 	(symbol
+		(lib_id "Simulation_SPICE:PMOS")
+		(at 231.14 105.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "561e5c3e-91e6-49ba-aa1f-b53dbeda969f")
+		(property "Reference" "Q101"
+			(at 237.49 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PMOS"
+			(at 237.49 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_MOSFETs"
+			(at 231.14 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "P-MOSFET transistor, drain/source/gate"
+			(at 231.14 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "PMOS"
+			(at 231.14 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" "VDMOS"
+			(at 231.14 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=D 2=G 3=S"
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f412483-a598-4b4c-865a-4c5223c69184")
+		)
+		(pin "2"
+			(uuid "09d75905-9317-4876-bfdc-ddfdf556cb57")
+		)
+		(pin "3"
+			(uuid "4331015a-6366-4e13-80ba-a20471fe8e08")
+		)
+		(instances
+			(project ""
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "Q101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0_16P")
 		(at 129.54 113.03 0)
 		(unit 1)
@@ -6294,6 +8421,73 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 342.9 82.55 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "786c8e1a-3463-4b33-822a-bb56b84de6b8")
+		(property "Reference" "TP104"
+			(at 345.948 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 340.36 84.5821 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 337.82 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 337.82 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 342.9 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "671afb27-5d82-4c88-b326-3e2207f84540")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "TP104")
 					(unit 1)
 				)
 			)
@@ -6556,6 +8750,214 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 401.32 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "882051b0-161e-4b71-a156-a3dc0566db8f")
+		(property "Reference" "R103"
+			(at 403.86 52.578 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "110R"
+			(at 403.86 56.896 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 401.32 56.388 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 401.32 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 401.32 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "59bec05e-5af4-4972-b0a1-352cbcdb23fd")
+		)
+		(pin "1"
+			(uuid "67ce16d4-fa80-40aa-9252-a84dd2574e3c")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "R103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 401.32 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "90d2db62-64ad-48ac-a84a-f1f7d97f95a9")
+		(property "Reference" "R101"
+			(at 403.86 65.278 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "110R"
+			(at 403.86 69.596 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 401.32 69.088 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 401.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 401.32 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0ee267a2-99aa-4c7d-8c7b-2124c131d7d9")
+		)
+		(pin "1"
+			(uuid "544149db-49d7-48ba-b6cb-63293ce29e53")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "R101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Thermistor_PTC")
+		(at 414.02 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2adc52f-24b4-4a9b-a949-fa314ffef073")
+		(property "Reference" "TH101"
+			(at 417.068 51.816 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100R"
+			(at 416.56 58.674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 419.1 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 414.02 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Temperature dependent resistor, positive temperature coefficient"
+			(at 414.02 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bea232f4-f45e-406e-837d-ec1669ae54ed")
+		)
+		(pin "1"
+			(uuid "9b14a68e-c170-4a56-affc-fc3202cc5934")
+		)
+		(instances
+			(project ""
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "TH101")
 					(unit 1)
 				)
 			)
@@ -6841,6 +9243,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 335.28 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c14732a8-b1f7-482e-83a6-501c415549cd")
+		(property "Reference" "#PWR0107"
+			(at 335.28 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 335.28 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 335.28 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 335.28 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 335.28 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "39f6184c-fd2b-4155-bbc1-d496a704df60")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 194.31 35.56 0)
 		(unit 1)
@@ -7109,6 +9576,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 335.28 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d0bb00d4-be96-4a3e-9636-ab0cf8802cba")
+		(property "Reference" "#PWR0108"
+			(at 335.28 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 335.28 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 335.28 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 335.28 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 335.28 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "afbc9b1d-f729-40c4-b65a-8732d1968223")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 57.15 146.05 0)
 		(unit 1)
@@ -7304,6 +9836,203 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 342.9 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dd4e8c37-4f62-4203-ac23-ef62202967ac")
+		(property "Reference" "TP103"
+			(at 339.852 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 345.44 37.3379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 347.98 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 347.98 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 342.9 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a89e3bc6-3f51-4eed-ba95-c83f3df525dc")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "TP103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 394.97 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ded7380d-d735-479c-bf71-a67d7afdf77e")
+		(property "Reference" "#PWR0103"
+			(at 394.97 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 394.97 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 394.97 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 394.97 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 394.97 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "84ed2ff9-dc0a-490e-9d45-0fcd67ca5ee1")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 375.92 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2eb0526-281c-45f3-8ffd-bc18eadbde84")
+		(property "Reference" "#PWR0101"
+			(at 375.92 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 375.92 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 375.92 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 375.92 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 375.92 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "934e582d-8921-4ae1-9f9f-9b3647c3235c")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 177.8 55.88 0)
 		(unit 1)
@@ -7434,6 +10163,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 407.67 80.01 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f7b7e93d-dfc9-422b-bd1b-2c1d093f7fb0")
+		(property "Reference" "TP102"
+			(at 410.718 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 405.13 82.0421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 402.59 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 402.59 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 407.67 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e0a3eaf-4be1-4d39-891f-3e3e62fdb0ad")
+		)
+		(instances
+			(project "MarinaWatch"
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "TP102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 177.8 40.64 0)
 		(unit 1)
@@ -7497,6 +10293,122 @@
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:OPAMP")
+		(at 373.38 40.64 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9e1f8d0-1f7f-43b5-aa98-d0b13057dff7")
+		(property "Reference" "U101"
+			(at 368.554 36.576 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "${SIM.PARAMS}"
+			(at 378.9365 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec__SUBCKT_Subcircuits"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Operational amplifier, single, node sequence=1:+ 2:- 3:OUT 4:V+ 5:V-"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=in+ 2=in- 3=vcc 4=vee 5=out"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "${KICAD7_SYMBOL_DIR}/Simulation_SPICE.sp"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "kicad_builtin_opamp"
+			(at 373.38 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f996791d-5781-4c59-bbdf-b592c26a0542")
+		)
+		(pin "3"
+			(uuid "1d7c259a-2135-4bca-9a36-216d4785328f")
+		)
+		(pin "4"
+			(uuid "69572eaf-71ad-45d9-9f84-d5c92eb62e68")
+		)
+		(pin "1"
+			(uuid "42c56394-a570-4f43-b8cf-35b6dc36b68a")
+		)
+		(pin "5"
+			(uuid "e92f32d2-94e4-415f-9185-1cb24deb6804")
+		)
+		(instances
+			(project ""
+				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082"
+					(reference "U101")
 					(unit 1)
 				)
 			)
