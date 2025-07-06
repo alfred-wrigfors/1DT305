@@ -1,14 +1,18 @@
 import time
 import pickle 
 
+import os
+
 
 class Database:
-    def __init__(self, location: str = "../.data/database.pkl"):
+    def __init__(self, location: str = "../data/database.pkl"):
         self.location = location
 
-        self.water  = []
-        self.air    = []
-        self.humid  = []
+        self.water      = []
+        self.air        = []
+        self.humid      = []
+        self.voltage    = []
+        self.soc        = []
 
         self.__load__()
 
@@ -19,6 +23,8 @@ class Database:
                 self.water  = data['water']
                 self.air    = data['air']
                 self.humid  = data['humid']
+                self.humid  = data['voltage']
+                self.humid  = data['soc']
         except Exception:
             pass
 
@@ -26,7 +32,7 @@ class Database:
     def __store__(self) -> None:
         try:
             with open(self.location, "wb") as file:
-                pickle.dump({'water': self.water, 'air': self.air, 'humid': self.humid}, file)
+                pickle.dump({'water': self.water, 'air': self.air, 'humid': self.humid, 'voltage': self.voltage, 'soc': self.soc}, file)
         except Exception as e:
             print(e)
             pass
@@ -42,7 +48,7 @@ class Database:
 
         return data
 
-    def put_water(self, time: float, value: float) -> None:
+    def put_water(self, value: float, time: float = time.time()) -> None:
         try:
             self.water.append({'time': time, 'value': value})
             self.__store__()
@@ -58,7 +64,7 @@ class Database:
 
         return data
 
-    def put_air(self, time: float, value: float) -> None:
+    def put_air(self, value: float, time: float = time.time()) -> None:
         try:
             self.water.append({'time': time, 'value': value})
             self.__store__()
@@ -74,7 +80,7 @@ class Database:
 
         return data
 
-    def put_humid(self, time: float, value: float) -> None:
+    def put_humid(self, value: float, time: float = time.time()) -> None:
         try:
             self.humid.append({'time': time, 'value': value})
             self.__store__()

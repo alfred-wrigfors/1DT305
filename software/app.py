@@ -1,33 +1,28 @@
 from flask import Flask
+
 import time
 
+from database       import Database
+from mqtt_handler   import MQTTHandler
 
+app         = Flask(__name__)
+mqtt        = MQTTHandler()
+mqtt2        = MQTTHandler()
 
-from database import Database
-
-app = Flask(__name__)
-
-database = Database()
-
-database.put_water(1.0, 10.0)
-database.put_water(2.0, 11.0)
-database.put_water(3.0, 12.0)
-database.put_water(4.0, 13.0)
-
-database = Database()
-
+database    = Database()
 
 @app.route("/")
 def hello():
-    return database.put_water(34.5, 34.4)
+    return database.put_water(34.4)
 
 @app.route("/api/get")
 def get():
-    return database.put_water(34.5, 34.4)
+    return database.put_water(34.4)
 
 @app.route("/api/put")
 def put():
-    return str(database.put_water(34.5, 34.4))
+    print(mqtt.publish())
+    return str(database.put_water(34.4))
 
 @app.route("/api/fetch/<time>")
 def fetch(time):
