@@ -1,28 +1,43 @@
-from flask import Flask
-
-import time
+from flask import Flask, render_template, request
 
 from database       import Database
-from mqtt_handler   import MQTTHandler
 
 app         = Flask(__name__)
-mqtt        = MQTTHandler()
-mqtt2        = MQTTHandler()
 
 database    = Database()
 
 @app.route("/")
 def hello():
-    return database.put_water(34.4)
+    return render_template('index.html')
 
 @app.route("/api/get")
 def get():
     return database.put_water(34.4)
 
-@app.route("/api/put")
-def put():
-    print(mqtt.publish())
-    return str(database.put_water(34.4))
+@app.route("/api/put/<channel>")
+def put(channel):
+    if not isinstance(channel, str):
+        return "False"
+    data = None
+    try:
+        data = float(request.args.get('value'))
+    except Exception:
+        return "False"
+    print(data)
+    match channel:
+        case "water":
+            return str(database.put_water(data))
+        case "air":
+            return str(database.put_air(data))
+        case "humid":
+            return str(database.put_humid(data))
+        case "voltage":
+            return str(database.put_voltage(data))
+        case "soc":
+            return str(database.put_soc(data))
+        case _:
+            pass
+    return "False"
 
 @app.route("/api/fetch/<time>")
 def fetch(time):
@@ -30,7 +45,12 @@ def fetch(time):
         water   = database.get_water(float(time))
         air     = database.get_air(float(time))
         humid   = database.get_humid(float(time))
-        return {'water': water, 'air': air, 'humid': humid}
+        voltage = database.get_voltage(float(time))
+        soc     = database.get_soc(float(time))
+        return {'water': water, 'air': air, 'humid': humid, 'voltage': voltage, 'soc': humid}
     except Exception:
         return ["Error"]
     
+
+# if __name__ == "__main__":
+#     app.run(ssl_context='adhoc')

@@ -28,14 +28,14 @@ services:
         - ./.data/software:/data
         environment:
         - FLASK_ENV=development
-        depends_on:
-        - mosquitto
-    mosquitto:
-        image: eclipse-mosquitto:2.0
-        ports:
-        - "1883:1883"    # MQTT protocol
-        - "9001:9001"    # WebSocket support (optional)
-        volumes:
-        - ./.data/mosquitto/config:/mosquitto/config
-        - ./.data/mosquitto/data:/mosquitto/data
-        - ./.data/mosquitto/log:/mosquitto/log
+    #     depends_on:
+    #     - mosquitto
+    # mosquitto:
+    #     image: eclipse-mosquitto:2.0
+    #     ports:
+    #     - "1883:1883"    # MQTT protocol
+    #     - "9001:9001"    # WebSocket support (optional)
+    #     volumes:
+    #     - ./.data/mosquitto/config:/mosquitto/config
+    #     - ./.data/mosquitto/data:/mosquitto/data
+    #     - ./.data/mosquitto/log:/mosquitto/log

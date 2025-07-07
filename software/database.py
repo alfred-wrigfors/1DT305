@@ -87,3 +87,36 @@ class Database:
             return True
         except Exception:
             return False
+
+    def put_voltage(self, value: float, time: float = time.time()) -> None:
+        try:
+            self.voltage.append({'time': time, 'value': value})
+            self.__store__()
+            return True
+        except Exception:
+            return False
+
+    def get_voltage(self, duration: float) -> None:
+        if len(self.voltage) < 1:
+            return []
+        
+        data = [pair for pair in self.humid if pair['time'] >= duration]
+
+        return data
+    
+    def put_soc(self, value: float, time: float = time.time()) -> None:
+        try:
+            self.soc.append({'time': time, 'value': value})
+            self.__store__()
+            return True
+        except Exception:
+            return False
+
+    def get_soc(self, duration: float) -> None:
+        if len(self.soc) < 1:
+            return []
+        
+        data = [pair for pair in self.humid if pair['time'] >= duration]
+
+        return data
+
