@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+import time
 from database       import Database
 
 app         = Flask(__name__)
@@ -39,6 +39,55 @@ def put(channel):
             pass
     return "False"
 
+@app.route("/api/put")
+def put_all():
+    success = False
+    t = time.time()
+
+    try:
+        data = float(request.args.get('water'))
+        if data is not None:
+            database.put_water(data, t)
+        success = True
+    except Exception:
+        pass
+
+    try:
+        data = float(request.args.get('air'))
+        if data is not None:
+            database.put_air(data, t)
+        success = True
+    except Exception:
+        pass
+
+    try:
+        data = float(request.args.get('humid'))
+        if data is not None:
+            database.put_humid(data, t)
+        success = True
+    except Exception:
+        pass
+
+    try:
+        data = float(request.args.get('voltage'))
+        if data is not None:
+            database.put_voltage(data, t)
+        success = True
+    except Exception:
+        pass
+
+    try:
+        data = float(request.args.get('soc'))
+        if data is not None:
+            database.put_soc(data, t)
+        success = True
+    except Exception:
+        pass
+
+    return str(success)
+
+    
+
 @app.route("/api/fetch/<time>")
 def fetch(time):
     try:
@@ -52,5 +101,5 @@ def fetch(time):
         return ["Error"]
     
 
-# if __name__ == "__main__":
-#     app.run(ssl_context='adhoc')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

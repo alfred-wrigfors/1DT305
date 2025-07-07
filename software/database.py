@@ -48,9 +48,12 @@ class Database:
 
         return data
 
-    def put_water(self, value: float, time: float = time.time()) -> None:
+    def put_water(self, value: float, t: float | None = None) -> None:
+        if t is None:
+            t = time.time()
+
         try:
-            self.water.append({'time': time, 'value': value})
+            self.water.append({'time': t, 'value': value})
             self.__store__()
             return True
         except Exception:
@@ -64,9 +67,12 @@ class Database:
 
         return data
 
-    def put_air(self, value: float, time: float = time.time()) -> None:
+    def put_air(self, value: float, t: float | None = None) -> None:
+        if t is None:
+            t = time.time()
+
         try:
-            self.water.append({'time': time, 'value': value})
+            self.air.append({'time': t, 'value': value})
             self.__store__()
             return True
         except Exception:
@@ -80,17 +86,23 @@ class Database:
 
         return data
 
-    def put_humid(self, value: float, time: float = time.time()) -> None:
+    def put_humid(self, value: float, t: float | None = None) -> None:
+        if t is None:
+            t = time.time()
+
         try:
-            self.humid.append({'time': time, 'value': value})
+            self.humid.append({'time': t, 'value': value})
             self.__store__()
             return True
         except Exception:
             return False
 
-    def put_voltage(self, value: float, time: float = time.time()) -> None:
+    def put_voltage(self, value: float, t: float | None = None) -> None:
+        if t is None:
+            t = time.time()
+
         try:
-            self.voltage.append({'time': time, 'value': value})
+            self.voltage.append({'time': t, 'value': value})
             self.__store__()
             return True
         except Exception:
@@ -104,9 +116,12 @@ class Database:
 
         return data
     
-    def put_soc(self, value: float, time: float = time.time()) -> None:
+    def put_soc(self, value: float, t: float | None = None) -> None:
+        if t is None:
+            t = time.time()
+
         try:
-            self.soc.append({'time': time, 'value': value})
+            self.soc.append({'time': t, 'value': value})
             self.__store__()
             return True
         except Exception:

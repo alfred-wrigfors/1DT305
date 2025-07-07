@@ -3,15 +3,38 @@ update_data();
 setInterval(update_data, 1000);
 
 
-function update_data() {
+async function update_data() {
     console.log("Updating data...");
-    const data = fetch_data();
-    display_data(data)
+    const data = await fetch_data();
+    if (data) {
+        display_data(data);
+    }
 }
 
-function fetch_data() {
-    return mock_data();
+async function fetch_data() {
+    try {
+        const res = await fetch('http://192.168.1.28:5000/api/fetch/0');
+        const data = await res.json();
+
+        const convertSeries = (series) =>
+            series.map(point => ({
+                x: new Date(point.time * 1000).toISOString(),
+                y: point.value
+            }));
+
+        return {
+            air_temp: convertSeries(data.air),
+            air_humidity: convertSeries(data.humid),
+            soc: convertSeries(data.soc),
+            voltage: convertSeries(data.voltage),
+            water_temp: convertSeries(data.water),
+        };
+    } catch (err) {
+        console.error('Error fetching data:', err);
+        return null;
+    }
 }
+
 
 function display_data(data){
 
@@ -19,6 +42,8 @@ function display_data(data){
     envChart.data.datasets[0].data = data.water_temp;
     envChart.data.datasets[1].data = data.air_temp;
     envChart.data.datasets[2].data = data.air_humidity;
+
+    console.log(data.water_temp);
 
     const timestamps = data.water_temp.map(d => new Date(d.x).getTime());
 
