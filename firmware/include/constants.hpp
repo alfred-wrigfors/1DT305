@@ -14,7 +14,7 @@ const float TEMP_OFFSET =  590.3520278;
 
 const int   RETRIES     = 5;
 
-const float BAT_COEFF   = 3.18;
+const float BAT_COEFF   = 3.20;
 const float BAT_MIN     = 7.2;
 const float BAT_MAX     = 9.6;
 
