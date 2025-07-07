@@ -1,93 +1,126 @@
-#include "WiFi.h"
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include "SHT85.h"
 
-void setup() {
-  Serial.begin(115200);
-  pinMode(A0, INPUT);
-  pinMode(A1, INPUT);
-  pinMode(5, OUTPUT);
-  // delay(1000);  // Allow time for Serial monitor to connect
-  // WiFi.mode(WIFI_STA);  // Set WiFi to station mode
-  // Serial.println("ESP32 S3 WiFi Scanner Started");
+#include "constants.hpp"
+
+const int PIN_WATER   = A0;
+const int PIN_BATTERY = A1;
+
+float water     = 0;
+float air       = 0;
+float humid     = 0;
+float voltage   = 0;
+float soc       = 0;
+
+void init();
+void setup_wifi();
+void read_sensors();
+bool send_data();
+void enter_sleep();
+
+float calc_temp(int adc);
+float calc_voltage(int adc);
+float calc_soc(float voltage);
+
+WiFiClient  client;
+SHT30       sht(0x44);
+
+void setup() { 
+
+    init();
+
+    setup_wifi();
 }
-
-bool state = false;
 
 void loop() {
 
-  int value = analogRead(A0);
-  Serial.println(value);
-  value = analogRead(A1);
-  Serial.println((3.3f * value) / 4095.0f * 3.2f);
-  digitalWrite(5, state);
-  state = !state;
-  // Serial.println("\nScanning for WiFi networks...");
+    read_sensors();
 
-  // int n = WiFi.scanNetworks();
-  // if (n == 0) { 
-  //   Serial.println("No networks found.");
-  // } else {
-  //   Serial.printf("%d network(s) found:\n", n);
-  //   for (int i = 0; i < n; ++i) {
-  //     Serial.printf("%d: %s (RSSI: %d) %s\n", i + 1,
-  //                   WiFi.SSID(i).c_str(),
-  //                   WiFi.RSSI(i),
-  //                   (WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? "Open" : "Encrypted");
-  //   }
-  // }
+    send_data();
 
-  // // Clean up to free memory
-  // WiFi.scanDelete();
+    enter_sleep();
+}
 
-  delay(2000);  // Wait 1 second before the next scan
+void init(){
+    Wire.begin();
+    Wire.setClock(100000);
+    sht.begin();
+    sht.isConnected();
+    sht.readStatus();
+    int status = sht.isConnected();
+    status = sht.readStatus();
+
+    pinMode(PIN_WATER, INPUT);      // PT Sensor
+    pinMode(PIN_BATTERY, INPUT);    // Battery Voltage
+}
+
+void setup_wifi(){
+
+    WiFi.begin(SSID, PASSWORD);
+    while (WiFi.status() != WL_CONNECTED) { delay(500); }
+}
+
+void read_sensors(){
+    for (size_t i = 0; i < 2; i++)
+    {
+        sht.read();
+        delay(50);
+    }    
+
+    water   = calc_temp(analogRead(PIN_WATER));
+    voltage = calc_voltage(analogRead(PIN_BATTERY));
+    soc     = calc_soc(voltage);
+    air     = sht.getTemperature();
+    humid   = sht.getHumidity();
 }
 
 
-// #include "SHT85.h"
+bool send_data(){
 
-// uint32_t start;
-// uint32_t stop;
+    if (!client.connect(SERVER, PORT)) { return false; }
 
-// SHT30 sht1(0x44);
-
-
-// void setup()
-// {
-//   //  while(!Serial);  //  uncomment if needed
-//   Serial.begin(115200);
-//   Serial.println();
-//   Serial.println(__FILE__);
-//   Serial.print("SHT_LIB_VERSION: \t");
-//   Serial.println(SHT_LIB_VERSION);
-//   Serial.println();
-
-//   Wire.begin();
-//   Wire.setClock(100000);
-//   sht1.begin();
-
-//   Serial.println("\nCONNECT");
-//   Serial.println(sht1.isConnected());
-
-//   Serial.println("\nSTATUS");
-//   uint16_t stat = sht1.readStatus();
-//   Serial.print(stat, HEX);
-//   Serial.println();
-//   Serial.print(stat, HEX);
-//   Serial.println();
-
-//   delay(1000);
-// }
+    // Construct full URL path with query
+    String url = "/" + String(ENDPOINT)  +  "?" + 
+        "water=" + String(water, 2) + "&" +
+        "air=" + String(air, 2) + "&" +
+        "humid=" + String(humid, 2) + "&" +
+        "voltage=" + String(voltage, 2) + "&" +
+        "soc=" + String(soc, 2);
 
 
-// void loop()
-// {
-//   start = micros();
-//   sht1.read();         //  default = true/fast       slow = false
-//   stop = micros();
-//   Serial.print("SHT1:\t");
-//   Serial.print((stop - start) * 0.001);
-//   Serial.print("\t");
-//   Serial.print(sht1.getTemperature(), 1);
-//   Serial.print("\t");
-//   Serial.println(sht1.getHumidity(), 1);
-//   delay(1000);
-// }
+    client.print(String("GET ") + url + " HTTP/1.1\r\n" +
+        "Host: " + SERVER + "\r\n" +
+        "Connection: close\r\n\r\n");
+
+    // Wait for response headers to end
+    while (client.connected()) {
+      String line = client.readStringUntil('\n');
+      if (line == "\r") { break; }
+    }
+
+    // Read body
+    String response = client.readString();
+
+    if (response != "True"){ return false; }
+
+    client.stop();
+
+    return true;
+}
+
+void enter_sleep(){
+    delay(5000);
+}
+
+float calc_temp(int adc){
+    return (float)adc * TEMP_COEFF + TEMP_OFFSET;
+}
+
+float calc_voltage(int adc){
+    return (float)adc / 4095 * 3.3 * BAT_COEFF;
+}
+
+float calc_soc(float voltage){
+    return 100.0f * (voltage - BAT_MIN) / (BAT_MAX - BAT_MIN);
+}
