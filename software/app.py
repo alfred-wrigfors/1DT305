@@ -96,7 +96,7 @@ def fetch(time):
         humid   = database.get_humid(float(time))
         voltage = database.get_voltage(float(time))
         soc     = database.get_soc(float(time))
-        return {'water': water, 'air': air, 'humid': humid, 'voltage': voltage, 'soc': humid}
+        return {'water': water, 'air': air, 'humid': humid, 'voltage': voltage, 'soc': soc}
     except Exception:
         return ["Error"]
     

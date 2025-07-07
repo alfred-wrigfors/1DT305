@@ -20,11 +20,11 @@ class Database:
         try:
             with open(self.location, "rb") as file:
                 data = pickle.load(file)
-                self.water  = data['water']
-                self.air    = data['air']
-                self.humid  = data['humid']
-                self.humid  = data['voltage']
-                self.humid  = data['soc']
+                self.water      = data['water']
+                self.air        = data['air']
+                self.humid      = data['humid']
+                self.voltage    = data['voltage']
+                self.soc        = data['soc']
         except Exception:
             pass
 
@@ -112,7 +112,7 @@ class Database:
         if len(self.voltage) < 1:
             return []
         
-        data = [pair for pair in self.humid if pair['time'] >= duration]
+        data = [pair for pair in self.voltage if pair['time'] >= duration]
 
         return data
     
@@ -131,7 +131,7 @@ class Database:
         if len(self.soc) < 1:
             return []
         
-        data = [pair for pair in self.humid if pair['time'] >= duration]
+        data = [pair for pair in self.soc if pair['time'] >= duration]
 
         return data
 
