@@ -110,7 +110,8 @@ bool send_data(){
 }
 
 void enter_sleep(){
-    delay(5000);
+    esp_sleep_enable_timer_wakeup(10 * 1000000);
+    esp_deep_sleep_start();
 }
 
 float calc_temp(int adc){
