@@ -1,10 +1,37 @@
 from flask import Flask, render_template, request
 import time
 from database       import Database
+from collections import deque
 
 app         = Flask(__name__)
 
 database    = Database()
+
+def split_list(lst, n):
+    k, m = divmod(len(lst), n)
+    return [lst[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(n)]
+
+
+# def moving_average(data, key, window_size, new_key = "value2"):
+#     if not data or window_size <= 0:
+#         return data  # handle empty input or invalid window
+
+#     window = deque()
+#     window_sum = 0.0
+
+#     for i, item in enumerate(data):
+#         value = item.get(key, 0)
+#         window.append(value)
+#         window_sum += value
+
+#         # Ensure the window is of the correct size
+#         if len(window) > window_size:
+#             window_sum -= window.popleft()
+
+#         avg = window_sum / len(window)
+#         item[new_key] = avg
+
+#     return data
 
 @app.route("/")
 def hello():
@@ -86,19 +113,43 @@ def put_all():
 
     return str(success)
 
-    
 
-@app.route("/api/fetch/<time>")
-def fetch(time):
+
+@app.route("/api/fetch/<t>")
+def fetch(t):
+    n = 500
+    bin = 1
     try:
-        water   = database.get_water(float(time))
-        air     = database.get_air(float(time))
-        humid   = database.get_humid(float(time))
-        voltage = database.get_voltage(float(time))
-        soc     = database.get_soc(float(time))
+        t = time.time() - float(t)
+
+        water   = database.get_water(t)
+        water   = sorted(water, key=lambda x: x['time'])
+        # water   = moving_average(water, key='value', window_size=bin)
+        water   = [{'time': sum([k['time'] for k in x]) / len(x), 'value': sum([k['value'] for k in x]) / len(x)} for x in split_list(water, n)]
+
+        air   = database.get_air(t)
+        air   = sorted(air, key=lambda x: x['time'])
+        # air   = moving_average(air, key='value', window_size=bin)
+        air   = [{'time': sum([k['time'] for k in x]) / len(x), 'value': sum([k['value'] for k in x]) / len(x)} for x in split_list(air, n)]
+
+        humid   = database.get_humid(t)
+        humid   = sorted(humid, key=lambda x: x['time'])
+        humid   = moving_average(humid, key='value', window_size=bin)
+        humid   = [{'time': sum([k['time'] for k in x]) / len(x), 'value': sum([k['value'] for k in x]) / len(x)} for x in split_list(humid, n)]
+
+        voltage   = database.get_voltage(t)
+        voltage   = sorted(voltage, key=lambda x: x['time'])
+        # voltage   = moving_average(voltage, key='value', window_size=bin)
+        voltage   = [{'time': sum([k['time'] for k in x]) / len(x), 'value': sum([k['value'] for k in x]) / len(x)} for x in split_list(voltage, n)]
+
+        soc   = database.get_soc(t)
+        soc   = sorted(soc, key=lambda x: x['time'])
+        # soc   = moving_average(soc, key='value', window_size=bin)
+        soc   = [{'time': sum([k['time'] for k in x]) / len(x), 'value': sum([k['value'] for k in x]) / len(x)} for x in split_list(soc, n)]
+
         return {'water': water, 'air': air, 'humid': humid, 'voltage': voltage, 'soc': soc}
-    except Exception:
-        return ["Error"]
+    except Exception as e:
+        return str(e)
     
 
 if __name__ == "__main__":

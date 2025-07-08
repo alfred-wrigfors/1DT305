@@ -13,7 +13,7 @@ async function update_data() {
 
 async function fetch_data() {
     try {
-        const res = await fetch('http://192.168.1.28:5000/api/fetch/0');
+        const res = await fetch('https://vikhog.wrigfors.se/api/fetch/86400');
         const data = await res.json();
 
         const convertSeries = (series) =>
@@ -102,6 +102,7 @@ function create_chart(){
       },
       options: {
         responsive: true,
+        maintainAspectRatio: true,
         scales: {
             x: {
                 type: 'time',

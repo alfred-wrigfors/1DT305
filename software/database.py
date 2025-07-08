@@ -44,7 +44,7 @@ class Database:
         if len(self.water) < 1:
             return []
         
-        data = [pair for pair in self.water if pair['time'] >= duration]
+        data = [pair for pair in self.water.copy() if pair['time'] >= duration]
 
         return data
 
@@ -63,7 +63,7 @@ class Database:
         if len(self.air) < 1:
             return []
         
-        data = [pair for pair in self.air if pair['time'] >= duration]
+        data = [pair for pair in self.air.copy() if pair['time'] >= duration]
 
         return data
 
@@ -82,7 +82,7 @@ class Database:
         if len(self.humid) < 1:
             return []
         
-        data = [pair for pair in self.humid if pair['time'] >= duration]
+        data = [pair for pair in self.humid.copy() if pair['time'] >= duration]
 
         return data
 
@@ -112,7 +112,7 @@ class Database:
         if len(self.voltage) < 1:
             return []
         
-        data = [pair for pair in self.voltage if pair['time'] >= duration]
+        data = [pair for pair in self.voltage.copy() if pair['time'] >= duration]
 
         return data
     
@@ -131,7 +131,7 @@ class Database:
         if len(self.soc) < 1:
             return []
         
-        data = [pair for pair in self.soc if pair['time'] >= duration]
+        data = [pair for pair in self.soc.copy() if pair['time'] >= duration]
 
         return data
 
