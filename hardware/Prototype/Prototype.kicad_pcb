@@ -402,7 +402,7 @@
 		(descr "Through hole straight socket strip, 1x03, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x03 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.77 270)
+			(at 0 -2.77 -90)
 			(layer "F.SilkS")
 			(uuid "b1e0b55f-8876-42ea-be4b-3aed2c7b08bd")
 			(effects
@@ -413,7 +413,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03_Socket"
-			(at 0 7.85 270)
+			(at 0 7.85 -90)
 			(layer "F.Fab")
 			(uuid "8e104014-e939-412a-a224-d9afc46449ae")
 			(effects
@@ -615,7 +615,7 @@
 			(uuid "ac6abfab-a51d-49b4-bb31-01483c3f46c8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 2.54 360)
+			(at 0 2.54 0)
 			(layer "F.Fab")
 			(uuid "830a0d9e-7dc2-4c6a-801b-4a7aa14cea37")
 			(effects
@@ -2364,7 +2364,7 @@
 		(descr "Resistor, Axial_DIN0207 series, Axial, Horizontal, pin pitch=10.16mm, 0.25W = 1/4W, length*diameter=6.3*2.5mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf")
 		(tags "Resistor Axial_DIN0207 series Axial Horizontal pin pitch 10.16mm 0.25W = 1/4W length 6.3mm diameter 2.5mm")
 		(property "Reference" "R1"
-			(at 5.08 -2.37 360)
+			(at 5.08 -2.37 0)
 			(layer "F.SilkS")
 			(uuid "a1005afd-ff0a-4435-81cd-488f0b1c0e00")
 			(effects
@@ -2375,7 +2375,7 @@
 			)
 		)
 		(property "Value" "220R"
-			(at 5.08 2.37 360)
+			(at 5.08 2.37 0)
 			(layer "F.Fab")
 			(uuid "a10bbcf2-2618-42a2-b866-d8f157961402")
 			(effects
@@ -2587,7 +2587,7 @@
 			(uuid "a69cea63-9999-42ab-bebc-fa69e1dac12b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5.08 0 360)
+			(at 5.08 0 0)
 			(layer "F.Fab")
 			(uuid "5b3bd6e6-26e2-4d9e-9518-273c10ca5e35")
 			(effects
@@ -2636,7 +2636,7 @@
 		(descr "C, Axial series, Axial, Horizontal, pin pitch=10mm, , length*diameter=5.1*3.1mm^2, http://www.vishay.com/docs/45231/arseries.pdf")
 		(tags "C Axial series Axial Horizontal pin pitch 10mm  length 5.1mm diameter 3.1mm")
 		(property "Reference" "C1"
-			(at 5 -2.67 360)
+			(at 5 -2.67 0)
 			(layer "F.SilkS")
 			(uuid "0ee992e0-6aef-4cc9-affc-129229431de6")
 			(effects
@@ -2647,7 +2647,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 5 2.67 360)
+			(at 5 2.67 0)
 			(layer "F.Fab")
 			(uuid "8fbd6f88-fc82-4c53-9bc5-04bf741a42e4")
 			(effects
@@ -2859,7 +2859,7 @@
 			(uuid "ce4638d7-5ace-4900-8611-2b0d84ca880d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 5 0 360)
+			(at 5 0 0)
 			(layer "F.Fab")
 			(uuid "a80180ab-4dd4-4f47-9f71-9272833ec2b2")
 			(effects
@@ -2908,7 +2908,7 @@
 		(descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x02 2.54mm single row")
 		(property "Reference" "J8"
-			(at 0 -2.77 270)
+			(at 0 -2.77 -90)
 			(layer "F.SilkS")
 			(uuid "c48add74-32fa-4e95-bbeb-8e199b8c96d2")
 			(effects
@@ -2919,7 +2919,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Socket"
-			(at 0 5.31 270)
+			(at 0 5.31 -90)
 			(layer "F.Fab")
 			(uuid "fee0e5c1-570f-40ed-9bb5-6064f5d10f07")
 			(effects
@@ -3121,7 +3121,7 @@
 			(uuid "e2ebb656-2c30-4cdd-baef-58ab8be6742d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "75862460-f958-4d97-9242-2e40e6d78489")
 			(effects
@@ -3450,6 +3450,18 @@
 		(fill none)
 		(layer "Edge.Cuts")
 		(uuid "7d960aaf-9b2a-4596-a89b-5ea97f7dee76")
+	)
+	(gr_text "9V Battery"
+		(at 124.46 85.92 0)
+		(layer "F.SilkS")
+		(uuid "14065f25-675a-45e0-a85e-020cdf66d93d")
+		(effects
+			(font
+				(size 4 4)
+				(thickness 0.75)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 101.6 119.38)
