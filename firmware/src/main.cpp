@@ -23,8 +23,8 @@ float calc_temp(int adc);
 float calc_voltage(int adc);
 float calc_soc(float voltage);
 
-WiFiClient  client;
-SHT30       sht(0x44);
+WiFiClient    client;
+SHT30               sht(0x44);
 
 void setup() { 
 
@@ -56,7 +56,6 @@ void init(){
 }
 
 void setup_wifi(){
-
     WiFi.begin(SSID, PASSWORD);
     while (WiFi.status() != WL_CONNECTED) { delay(500); }
 }

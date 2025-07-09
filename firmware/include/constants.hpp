@@ -2,10 +2,10 @@
 #define CONSTANTS_HPP
 
 // WiFi
-const char* SSID     = "QWERTY";
-const char* PASSWORD = "QWERTY";
+const char* SSID     = "12345678";
+const char* PASSWORD = "12345678";
 
-const char* SERVER      = "192.168.1.28";
+const char* SERVER      = "xxx.xxx.x.xx";
 const int   PORT        = 5000;
 const char* ENDPOINT    = "api/put";
 
