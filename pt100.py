@@ -12,16 +12,9 @@ def resistance(values: list[float], pt: list[float]) -> list[float]:
         data.append(abs(v1 - v2))
     return data
 
-data    = resistance(range(0, 1000), range(90, 120))
+data    = resistance(range(0, 1000), range(90, 147))
 values  = range(0, 1000)
-# PT = [100, 120]
 
-
-
-# for value in values:
-#     v1 = v_div(3.3, PT[0], value)
-#     v2 = v_div(3.3, PT[1], value)
-#     data.append(abs(v1 - v2))
 
 plt.plot(values, data)
 plt.xlabel('Resistance (Ohms)')
