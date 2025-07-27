@@ -495,7 +495,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 800,
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -650,6 +650,10 @@
     [
       "6e9d61f8-6668-48dd-9aac-9d74200f2082",
       "Root"
+    ],
+    [
+      "7af314a9-8f4b-48ba-869d-994953486d54",
+      "POWER"
     ]
   ],
   "text_variables": {}
