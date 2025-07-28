@@ -3645,7 +3645,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4166719b-5aab-49c6-8e2d-8b4f1cecd470")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0136"
 			(at 142.24 149.86 0)
 			(effects
 				(font
@@ -3695,7 +3695,7 @@
 		(instances
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082/7af314a9-8f4b-48ba-869d-994953486d54"
-					(reference "#PWR?")
+					(reference "#PWR0136")
 					(unit 1)
 				)
 			)
@@ -4976,7 +4976,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f526b900-442c-4ac4-83d7-84476f751973")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0137"
 			(at 116.84 82.55 0)
 			(effects
 				(font
@@ -5026,7 +5026,7 @@
 		(instances
 			(project "MarinaWatch"
 				(path "/6e9d61f8-6668-48dd-9aac-9d74200f2082/7af314a9-8f4b-48ba-869d-994953486d54"
-					(reference "#PWR?")
+					(reference "#PWR0137")
 					(unit 1)
 				)
 			)

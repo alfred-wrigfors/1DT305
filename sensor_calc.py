@@ -20,8 +20,8 @@ for t in PT_RANGE:
     resistance = 100.0 + t * PT_K
     v1 = v_div(max(RESISTORS), resistance)
     v2 = v_div(max(RESISTORS), min(RESISTORS))
-    v_out = amp(v1, v2, 3.0)
-    print(resistance)
+    v_out = amp(v1, v2, 7.5)
+    print(f"{t}, {v_out}")
 
     voltage.append(v_out)
     temp.append(t)
