@@ -1,4 +1,4 @@
-23611999950099596
+23615507587249771
 AlfredLib
 403A
 
@@ -27,6 +27,20 @@ SC74
 0
 6
 6
+AlfredLib
+VQFN-3.0x2.5
+
+
+0
+17
+15
+AlfredLib
+WSON-10
+
+
+0
+14
+10
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
