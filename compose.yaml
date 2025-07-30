@@ -1,23 +1,4 @@
-# services:
-#    mosquitto:
-#     container_name: mosquitto
-#     image: eclipse-mosquitto
-#     restart: always
-#     networks:
-#       - localnet
-#     ports:
-#       - 1883:1883
-#       - 1884:1884
-#     volumes:
-#       - ./.data/mosquitto/config:/mosquitto/config
-#       - ./.data/mosquitto/data:/mosquitto/data
-#       - ./.data/mosquitto/log:/mosquitto/log
-
-# networks:
-#   localnet:
-#     driver: bridge
 version: '3.9'
-
 services:
     software:
         build: ./software
@@ -28,14 +9,3 @@ services:
         - ./.data/software:/data
         environment:
         - FLASK_ENV=development
-    #     depends_on:
-    #     - mosquitto
-    # mosquitto:
-    #     image: eclipse-mosquitto:2.0
-    #     ports:
-    #     - "1883:1883"    # MQTT protocol
-    #     - "9001:9001"    # WebSocket support (optional)
-    #     volumes:
-    #     - ./.data/mosquitto/config:/mosquitto/config
-    #     - ./.data/mosquitto/data:/mosquitto/data
-    #     - ./.data/mosquitto/log:/mosquitto/log
