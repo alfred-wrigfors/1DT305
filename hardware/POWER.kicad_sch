@@ -3286,7 +3286,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "3k9"
 			(at 172.72 69.85 0)
 			(effects
 				(font
@@ -3682,7 +3682,7 @@
 		(dnp no)
 		(uuid "2ba96b2b-989a-48a9-bba2-135284f1e6d1")
 		(property "Reference" "TH601"
-			(at 214.63 69.85 0)
+			(at 215.9 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3690,17 +3690,16 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Thermistor_NTC"
-			(at 215.9 71.4374 0)
+		(property "Value" "4k7 @ 25C"
+			(at 215.9 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 213.36 68.58 0)
 			(effects
 				(font
@@ -4088,7 +4087,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "69bfbd38-362a-4166-9394-4236ee0fbdda")
 		(property "Reference" "R605"
 			(at 180.34 67.31 0)
@@ -4307,7 +4306,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "9k8"
 			(at 214.63 60.96 0)
 			(effects
 				(font
@@ -4582,7 +4581,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "9k8"
 			(at 132.08 60.96 0)
 			(effects
 				(font
@@ -5284,7 +5283,7 @@
 		(dnp no)
 		(uuid "f7fa732a-1080-4c06-b6b4-3eb40ecf9403")
 		(property "Reference" "TH501"
-			(at 132.08 69.85 0)
+			(at 133.35 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5292,17 +5291,16 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Thermistor_NTC"
-			(at 133.35 71.4374 0)
+		(property "Value" "4k7 @ 25C"
+			(at 133.35 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 130.81 68.58 0)
 			(effects
 				(font

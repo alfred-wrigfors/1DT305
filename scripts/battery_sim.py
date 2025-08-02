@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-BATTERY_CAPACITY = 2.0 * 3450 #mAh
+BATTERY_CAPACITY = 3450 #mAh
 
 class Sun:
     def __init__(self, start: float = 8.0, stop: float = 18.0, slope: float = 1/3):
@@ -39,11 +39,11 @@ class Device:
 
 
 SOLAR_POWER             = 0.55
-SOLAR_EFFICIENCY_FACTOR = 0.5
+SOLAR_EFFICIENCY_FACTOR = 0.4
 
 sun = Sun(11.0, 17.5, 1/2)
 battery = Battery((BATTERY_CAPACITY) / 1000 * 3600)
-device = Device(0.25*3.3, 0.01, 2.5, 30)
+device = Device(0.175*3.3, 0.01, 3.5, 30)
 
 soc = []
 time = []
