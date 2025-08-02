@@ -58,7 +58,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "hole_clearance|125850000|147145000|2d1ce3a5-4921-4d9e-a421-7b931e8d7b55|9bc788ce-073a-4ee6-8eb4-aa2f42eeb0db",
+        "hole_clearance|125850000|147145000|2d1ce3a5-4921-4d9e-a421-7b931e8d7b55|f63788ff-2294-49ac-9665-9c080153e491",
+        "hole_clearance|126050000|147145000|2d1ce3a5-4921-4d9e-a421-7b931e8d7b55|07a69297-3f36-4863-8625-e4ed93c99022",
+        "hole_clearance|126050000|147145000|2d1ce3a5-4921-4d9e-a421-7b931e8d7b55|15340871-d9de-4f78-be67-c4b5369c044a",
+        "hole_clearance|131450000|147145000|5b978748-7e7a-4fc6-a0f4-c151910c9b72|45543d65-ed39-4ea3-8f59-6ebcca378091",
+        "hole_clearance|131450000|147145000|5b978748-7e7a-4fc6-a0f4-c151910c9b72|fdf275b4-bde3-46a4-b922-d280445a477b",
+        "hole_clearance|131650000|147145000|5b978748-7e7a-4fc6-a0f4-c151910c9b72|93e4476f-312a-43c3-828d-9f14b61c0138",
+        "hole_clearance|131650000|147145000|5b978748-7e7a-4fc6-a0f4-c151910c9b72|c8e9a02a-94ca-4cf3-9dc1-ef16501d4449"
+      ],
       "meta": {
         "version": 2
       },
@@ -485,10 +494,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "MarinaWatch.step",
       "svg": "",
       "vrml": ""
     },
