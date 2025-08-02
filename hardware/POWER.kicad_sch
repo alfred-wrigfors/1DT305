@@ -2796,6 +2796,17 @@
 		)
 		(uuid d7434fab-c871-472f-9401-936d78fd2201)
 	)
+	(text "3.3 V OUT"
+		(exclude_from_sim no)
+		(at 161.29 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0be12a4d-84d8-47d5-9381-50377da959d4")
+	)
 	(text "CHARGING CIRCUITRY"
 		(exclude_from_sim no)
 		(at 64.77 27.94 0)
@@ -2807,6 +2818,17 @@
 		)
 		(uuid "182d6fb4-fd1e-4f72-93fe-f8d828a437ab")
 	)
+	(text "511R -> ~770mA"
+		(exclude_from_sim no)
+		(at 81.28 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "412d0156-eb65-40de-8b01-8c01440aba9f")
+	)
 	(text "POWER CIRCUITRY"
 		(exclude_from_sim no)
 		(at 64.77 95.25 0)
@@ -2817,6 +2839,39 @@
 			(justify left)
 		)
 		(uuid "a76cc762-e9a2-4512-b135-bd45ceaad19a")
+	)
+	(text "0R -> V_min = ~3.65V"
+		(exclude_from_sim no)
+		(at 163.83 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b5988d88-7bf7-4251-934e-555ee693fa86")
+	)
+	(text "511R -> V_min = 4.52"
+		(exclude_from_sim no)
+		(at 81.28 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5b2872f-f2a5-4e38-8c35-ac759a55dc71")
+	)
+	(text "5k1 -> ~77mA"
+		(exclude_from_sim no)
+		(at 163.83 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d8b2fae2-de65-401c-ae7e-eb1962ca4750")
 	)
 	(label "USB_VDPM"
 		(at 104.14 63.5 180)
@@ -3095,7 +3150,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "10k"
 			(at 124.46 119.38 0)
 			(effects
 				(font
@@ -3369,7 +3424,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "6k8"
 			(at 97.79 69.85 0)
 			(effects
 				(font
@@ -4044,7 +4099,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "0R"
 			(at 180.34 69.85 0)
 			(effects
 				(font
@@ -4735,7 +4790,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "511R"
 			(at 90.17 69.85 0)
 			(effects
 				(font
@@ -5034,7 +5089,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "10k"
 			(at 82.55 69.85 0)
 			(effects
 				(font
@@ -5103,7 +5158,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5k1"
+		(property "Value" "10k"
 			(at 165.1 69.85 0)
 			(effects
 				(font

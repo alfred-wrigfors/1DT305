@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
 
+BATTERY_CAPACITY = 2.0 * 3450 #mAh
+
 class Sun:
     def __init__(self, start: float = 8.0, stop: float = 18.0, slope: float = 1/3):
         self.start  = start - 1.0 / slope
@@ -36,11 +38,11 @@ class Device:
         return self.draw if time % self.duty <= self.time else self.idle
 
 
-SOLAR_POWER             = 0.5
-SOLAR_EFFICIENCY_FACTOR = 0.4
+SOLAR_POWER             = 0.55
+SOLAR_EFFICIENCY_FACTOR = 0.5
 
 sun = Sun(11.0, 17.5, 1/2)
-battery = Battery(3.0*3600, 3.7, 1.0)
+battery = Battery((BATTERY_CAPACITY) / 1000 * 3600)
 device = Device(0.25*3.3, 0.01, 2.5, 30)
 
 soc = []
@@ -56,6 +58,6 @@ for i in range((60*60*24*31 + 1) * 10):
 
 print(str(int(i / (60.0 * 60.0 * 24.0 * 10))) + " days and " + str(int((i / (60.0 * 60.0 * 10)) % 24)) + " hours")
 
-plt.plot(time, soc)
+plt.plot([ t / (10*24)for t in time], soc)
 plt.ylim(-0.1, 1.1)
 plt.show()
